@@ -11,12 +11,12 @@ const images = [
 
 export default function Gallery({ t }) {
   return (
-    <section id="gallery" className="py-20 bg-slate-900">
+    <section id="gallery" className="py-24 bg-[#F5EBDD]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">{t.gallery.title}</h2>
+        <h2 className="text-3xl md:text-4xl font-serif font-semibold text-neutral-900 mb-8">{t.gallery.title}</h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
           {images.map((src, i) => (
-            <img key={i} src={src} alt={`Gallery ${i+1}`} className="w-full h-56 object-cover rounded-lg shadow-lg" />
+            <img key={i} src={src} alt={`Gallery ${i+1}`} className="w-full h-56 object-cover rounded-lg shadow-md" />
           ))}
         </div>
       </div>

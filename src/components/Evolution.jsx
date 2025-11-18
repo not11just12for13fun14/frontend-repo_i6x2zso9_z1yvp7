@@ -9,15 +9,15 @@ const years = [
 
 export default function Evolution({ t }) {
   return (
-    <section id="evolution" className="py-20 bg-gradient-to-b from-slate-900 to-slate-950">
+    <section id="evolution" className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">{t.evolution.title}</h2>
+        <h2 className="text-3xl md:text-4xl font-serif font-semibold text-neutral-900 mb-8">{t.evolution.title}</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {years.map((y) => (
-            <div key={y.year} className="bg-white/5 border border-white/10 rounded-lg p-4 text-center">
+            <div key={y.year} className="bg-white border border-neutral-200 rounded-lg p-4 text-center shadow-sm">
               <img src={y.img} alt={`Botella ${y.year}`} className="mx-auto h-56 object-contain" />
-              <h3 className="mt-4 text-lg font-semibold text-white">{y.year}</h3>
-              <p className="text-slate-300 text-sm">{y.notes}</p>
+              <h3 className="mt-4 text-lg font-medium text-neutral-900">{y.year}</h3>
+              <p className="text-neutral-600 text-sm">{y.notes}</p>
             </div>
           ))}
         </div>

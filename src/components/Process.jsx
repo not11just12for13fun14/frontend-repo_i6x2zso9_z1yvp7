@@ -11,15 +11,17 @@ const stepsDefault = [
 export default function Process({ t }) {
   const steps = t.process.steps || stepsDefault
   return (
-    <section id="process" className="py-20 bg-slate-950">
+    <section id="process" className="py-24 bg-[#F5EBDD]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-10">{t.process.title}</h2>
-        <ol className="relative border-s border-white/10 ml-4 pl-6">
+        <h2 className="text-3xl md:text-4xl font-serif font-semibold text-neutral-900 mb-10">{t.process.title}</h2>
+        <ol className="grid md:grid-cols-5 gap-6">
           {steps.map((s, i) => (
-            <li key={i} className="mb-8">
-              <span className="absolute -left-3 mt-1 w-6 h-6 rounded-full bg-emerald-500 ring-2 ring-emerald-300/40" />
-              <h3 className="text-white font-semibold">{s.title}</h3>
-              <p className="text-slate-300">{s.desc}</p>
+            <li key={i} className="bg-white border border-neutral-200 rounded-lg p-5 shadow-sm">
+              <div className="flex items-center justify-between mb-2">
+                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#7A1C1C] text-white font-medium">{i+1}</span>
+              </div>
+              <h3 className="text-neutral-900 font-medium">{s.title}</h3>
+              <p className="text-neutral-700 text-sm">{s.desc}</p>
             </li>
           ))}
         </ol>

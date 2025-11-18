@@ -44,48 +44,48 @@ export default function Contact({ t }) {
   }
 
   return (
-    <section id="contact" className="py-20 bg-slate-900">
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">{t.contact.title}</h2>
-        <form onSubmit={handleSubmit} className="bg-white/5 border border-white/10 rounded-lg p-6 space-y-4">
+    <section id="contact" className="py-24 bg-white">
+      <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl md:text-4xl font-serif font-semibold text-neutral-900 mb-6">{t.contact.title}</h2>
+        <form onSubmit={handleSubmit} className="bg-white border border-neutral-200 rounded-xl p-6 space-y-4 shadow-sm">
           <div>
-            <label className="block text-slate-200 text-sm mb-1">{t.contact.name}</label>
+            <label className="block text-neutral-800 text-sm mb-1">{t.contact.name}</label>
             <input
               type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
-              className="w-full rounded-md bg-slate-800 border border-white/10 text-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full rounded-md bg-white border border-neutral-300 text-neutral-900 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#7A1C1C]/40"
               placeholder={t.contact.namePH}
             />
           </div>
           <div>
-            <label className="block text-slate-200 text-sm mb-1">{t.contact.email}</label>
+            <label className="block text-neutral-800 text-sm mb-1">{t.contact.email}</label>
             <input
               type="email"
               name="email"
               value={form.email}
               onChange={handleChange}
-              className="w-full rounded-md bg-slate-800 border border-white/10 text-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full rounded-md bg-white border border-neutral-300 text-neutral-900 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#7A1C1C]/40"
               placeholder={t.contact.emailPH}
             />
           </div>
           <div>
-            <label className="block text-slate-200 text-sm mb-1">{t.contact.message}</label>
+            <label className="block text-neutral-800 text-sm mb-1">{t.contact.message}</label>
             <textarea
               name="message"
               value={form.message}
               onChange={handleChange}
               rows="5"
-              className="w-full rounded-md bg-slate-800 border border-white/10 text-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full rounded-md bg-white border border-neutral-300 text-neutral-900 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#7A1C1C]/40"
               placeholder={t.contact.messagePH}
             />
           </div>
-          <button type="submit" className="inline-flex items-center px-5 py-3 rounded-md bg-emerald-500 text-white font-medium hover:bg-emerald-400 transition-colors">
+          <button type="submit" className="inline-flex items-center px-5 py-3 rounded-full bg-[#7A1C1C] text-white font-medium hover:bg-[#8D2222] transition-colors">
             {t.contact.submit}
           </button>
           {status && (
-            <p className={`${status.type === 'error' ? 'text-rose-400' : 'text-emerald-400'} text-sm`}>{status.message}</p>
+            <p className={`${status.type === 'error' ? 'text-rose-600' : 'text-emerald-600'} text-sm`}>{status.message}</p>
           )}
         </form>
       </div>

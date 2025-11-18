@@ -305,9 +305,9 @@ export default function App() {
   const t = useMemo(() => copy[lang], [lang])
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100">
+    <div className="min-h-screen bg-white text-neutral-900">
       <Header lang={lang} setLang={setLang} t={t} />
-      <main className="pt-16">
+      <main className="pt-14">
         <Hero t={t} />
         <About t={t} />
         <Gallery t={t} />
@@ -317,7 +317,7 @@ export default function App() {
         <Process t={t} />
         <Contact t={t} />
       </main>
-      <footer className="py-8 text-center text-slate-400 bg-slate-950/80 border-t border-white/10">
+      <footer className="py-10 text-center text-neutral-600 bg-[#F5EBDD] border-t border-neutral-200">
         © {new Date().getFullYear()} Albariño Artesanal — Galicia, España
       </footer>
     </div>
